@@ -1,0 +1,174 @@
+:root {
+    --dark-grey: #343434;
+    --light-grey: #bababa;
+    --white: #efefef;
+    --php-dark: #474A8A;
+    --php-mid: #787CB5;
+    --php-light: #B0B3D6;
+}
+
+body {
+    background-color: var(--dark-grey);
+}
+
+h1 {
+    color: var(--php-dark);
+}
+
+#image-uploader, #image-viewer {
+    background-color: var(--white);
+    width: 70%;
+    border-radius: 25px;
+    text-align: center;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0 10px 10px var(--light-grey) inset;
+    height: 100px;
+}
+
+#image-viewer {
+    height: auto;
+}
+
+#file-input input {
+    visibility: hidden;
+}
+
+#file-input, #submit-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--dark-grey);
+    background-color: var(--php-dark);
+    transition: background-color .2s ease, padding .2s ease, margin .2s ease;
+    color: white;
+}
+
+#submit-button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#file-input:hover, #submit-button:hover {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: var(--php-mid);
+    cursor: pointer;
+}
+
+input {
+    color: white;
+}
+
+.slide {
+    width: 100%;
+    display: flex;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--light-grey);
+    border-top: 1px solid var(--light-grey);
+    flex-direction: row;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 0 10px 0;
+    transition: background-color .2s ease;
+}
+
+.slide:hover {
+    background-color: #dfdfdf;
+    cursor: pointer;
+}
+
+.slide > h2 {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    color: var(--php-dark);
+}
+
+.slide > img {
+    width: 30%;
+}
+
+.slide-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border-left: 1px solid var(--php-dark);
+    padding-left: 20px;
+}
+
+.slide-info > p {
+    margin: 0;
+    color: var(--php-dark);
+    font-size: 24px;
+}
+
+#selected-image { 
+    position: relative;
+    z-index: 10;
+    height: 80vh;
+    width: 80vw:
+    margin: auto;
+}
+
+#selected-image-container {
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50vh;
+    width: 100%;
+    left: 0;
+    background-color: #343434cc;
+    z-index: 9;
+    height: 0vh;
+    transition: height .2s ease, top .2s ease;
+}
+
+#close-selected-image-button, .delete-slide-button {
+	background-color: #dd4444;
+	z-index: 11;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 18px;
+	position: absolute;
+	right: 3vw;
+	top: 5vh;
+	border: 2px solid black;
+	font-size: 18px;
+	font-weight: 900;
+}
+
+#close-selected-image-button:hover, .delete-slide-button:hover {
+	background-color: red;
+	cursor: pointer;
+}
+
+.delete-slide-button {
+	z-index: 8;
+	width: 28px;
+	height: 28px;
+	border-radius: 14px;
+	font-size: 14px;
+	font-weight: 800;
+	opacity: 0;
+	transition: opacity .2s ease;
+}
+
+.slide:hover > .delete-slide-button {
+	opacity: 1;
+}

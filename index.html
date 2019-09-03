@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Uploader</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+
+    <div id="selected-image-container">
+	<button id="close-selected-image-button">X</button>
+        <img src="" alt="?" id="selected-image">
+    </div>
+
+    <form action="upload.php" enctype="multipart/form-data" method="POST" id="image-uploader">
+        <h1>Upload Images</h1>
+        <div>
+            <input type="file" id="file-input" name="fileToUpload" placeholder="hello">
+            <button id="submit-button">Submit</button>
+        </div>
+    </form>
+    
+    <div id="image-viewer">
+        <!-- <button id="get-button"></button> -->
+    </div>
+
+</body>
+</html>
