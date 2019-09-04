@@ -5,6 +5,7 @@ const openImage = (filepath) => {
 	let selectedImageContainer = document.getElementById('selected-image-container');
 	selectedImageContainer.style.height = "100vh";
 	selectedImageContainer.style.top = "0vh";
+	selectedImageContainer.style.opacity = "1";
 	//selectedImageContainer.innerHTML = "<img src=\"" + filepath + "\" id=\"selected-image\">";
 	let selectedImage = document.getElementById('selected-image');
 	selectedImage.src = filepath;
@@ -15,6 +16,7 @@ const closeImage = () => {
 	let selectedImageContainer = document.getElementById('selected-image-container');
 	selectedImageContainer.style.height = "0vh";
 	selectedImageContainer.style.top = "50vh";
+	selectedImageContainer.style.opacity = "0";
 }
 
 const getImages = function () {
